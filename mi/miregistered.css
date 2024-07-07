@@ -1,0 +1,511 @@
+.mi-form__content {
+  margin-top: 20px;
+}
+
+.mi-form__content .ant-select {
+  height: 60px;
+  background-color: rgb(249, 249, 249);
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: border 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+}
+
+.ant-select .ant-select-selector {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+
+
+.ant-select-selection-search {
+  position: absolute;
+  left: 20px;
+  color: #999;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ant-select-selection-item {
+  height: 100%;
+  line-height: 23px;
+  cursor: pointer;
+  padding: 30px 20px 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+
+}
+
+.ant-select .iconfont.icon-right-1-copy {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  font-size: 16px;
+  color: #999;
+  transform: rotate(0.25turn);
+}
+
+.mi-input-adornment .iconfont.icon-right-1-copy {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: -10px;
+  top: 40%;
+  color: #999;
+  transform: rotate(0.25turn);
+}
+
+.mi-form-field__field .mi-input-adornment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  cursor: not-allowed;
+}
+
+.mi-form-field__field {
+  display: flex;
+  background-color: rgb(249, 249, 249);
+  border: 1px solid transparent;
+  transition: border 0.3s,
+    box-shadow 0.3s;
+}
+
+.ant-select-selection-search {
+  height: 25px;
+}
+
+.mi-text-field .msg {
+  display: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgb(240, 70, 69);
+  line-height: 1;
+  margin-top: 10px;
+}
+
+.mi-text-field .msg.active {
+  display: block;
+}
+
+.mi-input-adornment .ant-select-selection-item {
+  cursor: not-allowed;
+  font-size: 16px;
+  color: #aaa;
+  height: 25px;
+}
+
+.mi-text-field {
+
+
+  border-radius: 3px;
+  margin-top: 20px;
+  height: 100%;
+
+}
+
+.mi-form-field__field.active {
+  border: 1px solid rgb(255, 106, 0);
+  box-shadow: 0 0 5px rgb(255, 106, 0);
+
+}
+
+
+
+.mi-form-field__control {
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+
+.mi-form-field__control .mi-input__input {
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px 10px;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+
+.mi-form-field__control .mi-label {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #999;
+
+  transition: transform 0.3s;
+
+}
+
+.mi-form__content .mi-ticket-field {
+  display: flex;
+  border: 1px solid transparent;
+  transition: border 0.3s,
+    box-shadow 0.3s;
+
+
+  margin-top: 20px;
+  background-color: rgb(249, 249, 249);
+  height: 60px;
+}
+
+.mi-ticket-field .mi-text-field__input {
+  position: relative;
+}
+
+.mi-text-field__input .floating-label {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #999;
+  transition: color 0.3s,
+    transform 0.3s;
+
+}
+
+.mi-text-field__input .mi-input__input {
+  width: 252px;
+  height: 100%;
+  padding: 30px 20px 10px;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.mi-ticket-field .mi-input-ticket-adornment {
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
+}
+
+.mi-input-ticket-adornment .ant-btn {
+  color: rgb(255, 135, 105);
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.mi-input-ticket-adornment .ant-btn:hover {
+  color: rgb(255, 126, 41);
+}
+
+.mi-form__content label {
+  pointer-events: none;
+}
+
+
+.mi-layout__card .mi-button {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(255, 190, 153);
+  transition: background-color 0.3s ease;
+}
+
+.mi-layout__card .mi-button:hover {
+  background-color: rgb(255, 203, 169);
+}
+
+
+.ant-checkbox .ant-checkbox-inner {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(233, 233, 233, 0.5);
+  background-color: rgb(249, 249, 249);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+
+.ant-checkbox .ant-checkbox-inner:hover {
+  border: 1px solid #ff5c00;
+}
+
+
+
+.ant-checkbox-inner.active {
+  border: 1px solid #ff5c00;
+  background-color: #ff5c00;
+}
+
+.ant-checkbox-inner .iconfont.icon-xuanzhong {
+  position: absolute;
+  font-size: 13px;
+  top: -10px;
+  left: 2px;
+  color: #fff;
+
+}
+
+.iconfont.icon-xuanzhong.active {
+  display: none;
+}
+
+.mi-form__content .float-box {
+  display: flex;
+  visibility: hidden;
+  transform: scale(0.9) translate(-10%, 0%);
+  transition: transform 0.3s ease;
+
+  position: absolute;
+  width: 250px;
+  height: 70px;
+  line-height: 1.5;
+  top: -5px;
+  right: -270px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+.mi-form__content .float-box::before {
+  position: absolute;
+  left: -5px;
+  top: 35%;
+
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 5px solid #fff;
+
+}
+
+i {
+  font-style: normal;
+}
+
+.float-box .ant-select-dangerous {
+  margin: 0 5px;
+  font-size: 10px;
+  background-color: #ff5c00;
+  padding: 0 5px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+
+
+
+.mi-form__content .float-box.active {
+  visibility: visible;
+  transform: scale(1) translate(0, 0);
+}
+
+.ant-select-drop-down-box {
+  visibility: hidden;
+
+  transform: scale(1, 0.9) translate(0, -4%);
+  transition: transform 0.1s ease-in-out;
+
+
+
+  padding: 5px 0;
+  z-index: 2;
+  box-shadow: 0 0 15px rgb(0, 0, 0, 0.1);
+  width: 356px;
+  height: 332px;
+  position: absolute;
+  bottom: -335px;
+  background-color: #fff;
+
+}
+
+.ant-select-drop-down-box.active {
+  visibility: visible;
+  transform: scale(1, 1) translate(0, 0);
+
+}
+
+.ant-select-drop-down-box .mi-region-field__search {
+  padding: 10px 20px;
+}
+
+.mi-region-field__search .mi-form-field {
+  display: flex;
+  background-color: rgb(249, 249, 249);
+}
+
+.mi-form-field .mi-region-field__search-input {
+  width: 100%;
+  height: 46px;
+  padding: 0px 20px 0 10px;
+  border-radius: 3px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: rgb(249, 249, 249);
+}
+
+.mi-region-field__search .iconfont.icon-sousuo {
+  font-size: 17px;
+  line-height: 46px;
+  color: #999;
+  margin-left: 20px;
+}
+
+.rc-virtual-list-holder .rc-virtual-list-holder-inner {
+  overflow-y: scroll;
+  height: 256px;
+}
+
+
+
+.ant-select-item .mi-region-field__name:hover {
+  background-color: rgb(255, 243, 230);
+  color: #333;
+}
+
+
+
+.ant-select-item .mi-region-field__name {
+  padding: 10px 20px;
+  color: rgba(200, 200, 200, 0.8);
+  transition: color 0.3s ease,
+    background-color 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mi-region-field__name.active {
+  background-color: rgb(255, 243, 230);
+}
+
+.ant-select-item.active {
+  background-color: rgb(245, 245, 245);
+}
+
+.mi-ticket-field.active {
+  border: 1px solid rgb(255, 106, 0);
+  box-shadow: 0 0 5px rgb(255, 106, 0);
+}
+
+
+
+
+
+
+.miui-modal-wrap {
+
+
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  transition: all 0.3s ease;
+}
+
+.miui-modal-content {
+  padding: 28px 0;
+  border-radius: 8px;
+  position: relative;
+  left: 48.7%;
+  top: 45%;
+  /* margin: 25% auto; */
+  width: 416px;
+  height: 168px;
+  background-color: #fff;
+}
+
+.miui-modal-content .miui-modal-close {
+  position: absolute;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: transparent;
+  right: 30px;
+  top: 32px;
+}
+
+.miui-modal-close .miuiicon {
+  color: #999;
+}
+
+.miui-modal-close .miuiicon:hover {
+  color: #000;
+}
+
+.miui-modal-content .miui-modal-header {
+  padding: 0 28px 16px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+
+.miui-modal-content .miui-modal-body {
+  padding: 0 28px 16px;
+  color: #999;
+}
+
+.miui-modal-content .miui-modal-body a {
+  font-weight: 900;
+}
+
+
+.miui-modal-content .miui-modal-footer {
+  padding: 8px 28px 0;
+  text-align: right;
+}
+
+.miui-modal-footer .miui-btn {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.miui-modal-footer .miui-btn.miui-btn-default {
+  padding: 6.5px 20px;
+  line-height: 20px;
+  background-color: rgb(240, 240, 240);
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.miui-modal-footer .miui-btn.miui-btn-default:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+.miui-modal-footer .miui-btn.miui-btn-primary {
+  padding: 6.5px 20px;
+  line-height: 20px;
+  background-color: rgb(255, 105, 0);
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.miui-modal-footer .miui-btn.miui-btn-primary:hover {
+  background-color: rgb(255, 126, 41);
+}
