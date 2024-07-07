@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./milogin.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4600553_yzk4s252rqd.css">
+  <link rel="stylesheet" href="./miregistered.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="login-password-root-wrap">
+      <div class="mi-sider-layout">
+        <div class="mi-sider-layout__sider">
+          <div class="mi-sider-layout__banner"></div>
+        </div>
+        <div class="mi-sider-layout__content">
+          <div class="mi-sider-layout__scroll">
+            <div class="mi-layout">
+              <div class="mi-layout__header clearfix">
+                <div class="mi-layout__title">
+                  <div class="mi-layout__logo"></div>
+                  <p class="title">小米账号</p>
+                </div>
+                <div class="mi-nav">
+                  <a href="javascript:;" class="mi-nav__item">用户协议</a>
+                  <a href="javascript:;" class="mi-nav__item">隐私政策</a>
+                  <a href="javascript:;" class="mi-nav__item">帮助中心</a>
+                  <span class="line"> |</span>
+                  <span href="javascript:;" class="mi-nav__item language" style="cursor: pointer;">
+                    中文(简体)
+                    <div class="ant-dropdown">
+                      <a href="">中文(繁體)</a>
+                      <a href="">English</a>
+                      <a href="">日本語</a>
+                      <a href="">Français</a>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div class="mi-layout__container">
+                <div class="mi-layout__card">
+                  <div class="qr-switch-wrap">
+                    <div class="anticon iconfont icon-erweima">
+
+                    </div>
+                    <div class="ant-popover">
+                      扫码登录
+                    </div>
+                  </div>
+                  <div class="ant-tabs">
+                    <div class="ant-tabs-nav">
+                      <a href="./milogin.html" class="ant-tabs-tab">登录</a>
+                      <a href="./miregistered.html" class="ant-tabs-tab active">注册</a>
+                    </div>
+                    <div class="mi-form__content">
+                      <div class="ant-select">
+                        <div class="ant-select-selector">
+                          <span class="ant-select-selection-search">
+                            国家/地区
+                          </span>
+                          <span class="ant-select-selection-item" title="中国">
+                            中国
+                          </span>
+                          <div class="float-box">
+                            <span><i class="ant-select-dangerous">!</i></span>
+                            <span>系统会根据您选择的国家/地区的法律法规存储您的个人信息</span>
+                          </div>
+                          <div class="ant-select-drop-down-box">
+                            <div class="mi-region-field__search">
+                              <div class="mi-form-field">
+                                <i class="iconfont icon-sousuo"></i>
+                                <input class="mi-region-field__search-input" type="text" placeholder="搜索国家/地区名称">
+                              </div>
+                            </div>
+                            <div class="rc-virtual-list">
+                              <div class="rc-virtual-list-holder">
+                                <div class="rc-virtual-list-holder-inner">
+                                  <div class="ant-select-item">
+                                    <div class="mi-region-field__name">
+                                      中非
+                                    </div>
+                                  </div>
+                                  <div class="ant-select-item ">
+                                    <div class="mi-region-field__name">
+                                      阿尔巴尼亚
+                                    </div>
+                                  </div>
+                                  <div class="ant-select-item">
+                                    <div class="mi-region-field__name">
+                                      伊拉克
+                                    </div>
+                                  </div>
+                                  <div class="ant-select-item">
+                                    <div class="mi-region-field__name">
+                                      伊朗
+                                    </div>
+                                  </div>
+                                  <div class="ant-select-item active">
+                                    <div class="mi-region-field__name active">
+                                      中国
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="iconfont icon-right-1-copy">
+
+                        </span>
+
+                      </div>
+                      <div class="mi-text-field">
+                        <div class="mi-form-field__field">
+                          <div class="mi-input-adornment">
+                            <span class="ant-select-selection-search">国家码</span>
+                            <span class="ant-select-selection-item" title="+86">+86</span>
+                            <span class="iconfont icon-right-1-copy"></span>
+                          </div>
+                          <div class="mi-form-field__control">
+                            <input type="text" class="mi-input__input">
+                            <label for="" class="mi-label">手机号</label>
+                          </div>
+                        </div>
+                        <span class="msg">请输入手机号码</span>
+                      </div>
+                      <div class="mi-text-field">
+                        <div class="mi-ticket-field">
+                          <div class="mi-text-field__input">
+                            <input type="text" class="mi-input__input" maxLength="6">
+                            <label for="" class="floating-label">请输入验证码</label>
+                          </div>
+                          <div class="mi-input-ticket-adornment">
+                            <button class="ant-btn">获取验证码</button>
+                          </div>
+                        </div>
+                        <span class="msg" id="msg">请输入验证码</span>
+                      </div>
+                      <div class="mi-accept-terms">
+                        <span class="ant-checkbox">
+                          <span for="customCheckbox" class="ant-checkbox-inner">
+                            <i class="iconfont icon-xuanzhong active"></i>
+                          </span>
+                        </span>
+                        <span>
+                          已阅读并同意小米账号
+                          <a href="">用户协议</a>
+                          和
+                          <a href="">隐私政策</a>
+                        </span>
+                      </div>
+                      <button class="mi-button">
+                        注册
+                      </button>
+                      <div class="mi-form-actions">
+                        <a href="" class="mi-external-url">收不到验证码?</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mi-copyright">
+                  小米公司版权所有-京ICP备10046444-
+                  <a href="">京公网安备11010802020134号</a>
+                  -京ICP证110507号
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="miui-modal-wrap">
+      <div class="miui-modal-content">
+        <button type="button" class="miui-modal-close">
+          <span class="miuiicon">X</span>
+        </button>
+        <div class="miui-modal-header">
+          <div class="miui-modal-title" id="rcDialogTitle0">友情提示</div>
+        </div>
+        <div class="miui-modal-body">
+          已阅读并同意小米账号
+          <a href="javascript:;">用户协议</a>
+          和
+          <a href="javascript:;">隐私政策</a>
+        </div>
+        <div class="miui-modal-footer">
+          <button type="button" class="miui-btn miui-btn-default">
+            <span>取消</span>
+          </button>
+          <button type="button" class="miui-btn miui-btn-primary">
+            <span style="color: #fff;">同意并继续</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+
+      let Selected = false;
+
+      const checkbox_inner = document.querySelector(".ant-checkbox .ant-checkbox-inner");
+      const xuanzhong = document.querySelector(".ant-checkbox-inner .iconfont.icon-xuanzhong");
+      checkbox_inner.addEventListener("click", checkbox_Selected);
+
+      function checkbox_Selected() {
+        xuanzhong.classList.toggle("active");
+        checkbox_inner.classList.toggle("active");
+        Selected = !Selected;
+      }
+
+
+
+      const down_box = document.querySelector(".ant-select-drop-down-box");
+      const select = document.querySelector(".mi-form__content .ant-select");
+      select.setAttribute('tabindex', '0');
+      const item = document.querySelector(".ant-select-selector .ant-select-selection-item");
+      const float_box = document.querySelector(".mi-form__content .float-box");
+      let timeid = null;
+      let isPress = false;
+
+
+
+
+
+
+      select.addEventListener("click", function () {
+
+        this.style.border = "1px solid #ff5c00";
+        this.style.boxShadow = "0 0 5px #ff5c00";
+        item.style.color = "#999";
+
+
+        if (isPress) {
+          down_box.classList.remove("active");
+          isPress = false;
+          hide();
+        }
+        else if (!isPress) {
+          down_box.classList.add("active");
+          clearTimeout(timeid);
+          float_box.classList.add("active");
+          isPress = true;
+        }
+
+      });
+
+      select.addEventListener("blur", function () {
+        down_box.classList.remove("active");
+        this.style.border = "1px solid transparent";
+        this.style.boxShadow = "none";
+        item.style.color = "#000";
+
+        isPress = false;
+        hide();
+      });
+
+
+
+      select.addEventListener("mouseenter", show);
+      select.addEventListener("mouseleave", hide);
+
+      function show() {
+        clearTimeout(timeid);
+        float_box.classList.add("active");
+      }
+
+
+      function hide() {
+        if (!isPress) {
+
+          timeid = setTimeout(function () {
+            float_box.classList.remove("active");
+          }, 200);
+
+        }
+      }
+
+
+
+      const inner = document.querySelector(".rc-virtual-list-holder-inner");
+
+      inner.addEventListener("mouseover", function (e) {
+        if (e.target.tagName === "DIV") {
+          let select_item = document.querySelector(".ant-select-item.active");
+          if (select_item) select_item.classList.remove("active");
+
+          e.target.parentElement.classList.add("active");
+        }
+
+      });
+
+
+
+      const msg = document.querySelector(".mi-text-field .msg");
+      const input__input = document.querySelector(".mi-input__input");
+      const field__field = document.querySelector(".mi-form-field__field");
+      const mi_label = document.querySelector(".mi-label");
+      const selection_search = document.querySelector(".mi-input-adornment .ant-select-selection-search");
+      const reg = /^[1][3-9][\d]{9}$/;
+
+      let isfirst = false;
+      input__input.addEventListener("input", function () {
+        if (!this.value) {
+          msg.innerHTML = "请输入手机号码";
+        }
+        else if (!reg.test(this.value)) {
+          msg.innerHTML = "手机号码格式错误";
+
+          if (isfirst) {
+            field__field.style.backgroundColor = "rgb(252,242,243)";
+            mi_label.style.color = "rgb(240,70,69)";
+            selection_search.style.color = "rgb(240,70,69)";
+            msg.classList.add("active");
+          }
+
+        }
+        else if (reg.test(this.value)) {
+          const msg = document.querySelector(".mi-text-field .msg.active");
+          if (msg) msg.classList.remove("active");
+
+          mi_label.style.color = "#999";
+          selection_search.style.color = "#999";
+          field__field.style.backgroundColor = "rgb(249,249,249)";
+          isfirst = true;
+        }
+      });
+
+
+      input__input.addEventListener("focus", function () {
+        field__field.classList.add("active");
+        mi_label.style.transform = "scale(0.7) translate(-25%, -50%)";
+      });
+
+      input__input.addEventListener("blur", function () {
+        field__field.classList.remove("active");
+
+
+        if (!this.value || !reg.test(this.value)) {
+
+
+          if (!this.value) {
+            mi_label.style.transform = "scale(1) translate(0, 0)";
+
+          }
+
+
+          field__field.style.backgroundColor = "rgb(252,242,243)";
+          mi_label.style.color = "rgb(240,70,69)";
+          selection_search.style.color = "rgb(240,70,69)";
+          msg.classList.add("active");
+        }
+        else if (this.value && reg.test(this.value)) {
+          const msg = document.querySelector(".mi-text-field .msg.active");
+          if (msg) msg.classList.remove("active");
+
+          mi_label.style.color = "#999";
+          selection_search.style.color = "#999";
+          field__field.style.backgroundColor = "rgb(249,249,249)";
+        }
+
+      });
+
+
+      const input__input2 = document.querySelector(".mi-text-field__input .mi-input__input");
+      const floating_label = document.querySelector(".floating-label");
+      const ticket_field = document.querySelector(".mi-ticket-field");
+      const msg2 = ticket_field.nextElementSibling;
+      const reg2 = /^[\d]{6}$/;
+      let timeid2 = null;
+
+      input__input2.addEventListener("input", function () {
+        if (this.value) {
+          const msg = document.querySelector(".mi-text-field #msg.active");
+          if (msg) msg.classList.remove("active");
+
+          floating_label.style.color = "#999";
+          ticket_field.style.backgroundColor = "rgb(249,249,249)";
+        }
+        else if (!this.value) {
+          floating_label.style.color = "rgb(240,70,69)";
+          ticket_field.style.backgroundColor = "rgb(252,242,243)";
+          msg2.classList.add("active");
+        }
+      });
+
+      input__input2.addEventListener("focus", function () {
+        clearTimeout(timeid2);
+        if (!ticket_field.classList.contains("active"))
+          ticket_field.classList.add("active");
+
+
+        floating_label.style.transform = "scale(0.7) translate(-23%, -50%)";
+      });
+
+
+      input__input2.addEventListener("blur", function () {
+
+        timeid2 = setTimeout(() => {
+          ticket_field.classList.remove("active");
+        }, 100);
+
+        if (!this.value && !reg2.test(this.value)) {
+
+          if (!this.value) {
+            floating_label.style.transform = "scale(1) translate(0, 0)";
+          }
+
+
+          floating_label.style.color = "rgb(240,70,69)";
+          ticket_field.style.backgroundColor = "rgb(252,242,243)";
+          msg2.classList.add("active");
+        }
+        else if (this.value || reg2.test(this.value)) {
+          const msg = document.querySelector(".mi-text-field #msg.active");
+          if (msg) msg.classList.remove("active");
+
+          floating_label.style.color = "#999";
+          ticket_field.style.backgroundColor = "rgb(249,249,249)";
+        }
+
+      });
+
+
+      const ant_btn = document.querySelector(".mi-input-ticket-adornment .ant-btn");
+      const modal_wrap = document.querySelector(".miui-modal-wrap");
+      let ant_btn_isPress = false;
+
+
+      ant_btn.addEventListener("click", function () {
+        clearTimeout(timeid2);
+
+        if (!ticket_field.classList.contains("active"))
+          ticket_field.classList.add("active");
+
+        if (!input__input.value) {
+          field__field.style.backgroundColor = "rgb(252,242,243)";
+          mi_label.style.color = "rgb(240,70,69)";
+          selection_search.style.color = "rgb(240,70,69)";
+          msg.classList.add("active");
+        }
+        else if (input__input.value && reg.test(input__input.value)) {
+          if (Selected) {
+
+            mailbox_time();
+
+            return;
+          }
+          modal_wrap.style.display = "block";
+        }
+
+      });
+
+      function mailbox_time() {
+        if (!ant_btn_isPress) {
+          ant_btn_isPress = true;
+          let i = 60;
+          let timeid = null;
+          ant_btn.innerHTML = `重新发送 ${i}s`;
+          ant_btn.style.cursor = "not-allowed";
+          ant_btn.style.color = "#999";
+          ticket_field.style.backgroundColor = "rgb(252,242,243)";
+          floating_label.style.color = "rgb(240,70,69)";
+          msg2.classList.add("active");
+          ant_btn.disabled = true;
+
+
+          timeid = setInterval(() => {
+            i--;
+            ant_btn.innerHTML = `重新发送 ${i}s`;
+
+            if (i <= -1) {
+              ant_btn.innerHTML = `重新发送`;
+              clearInterval(timeid);
+              ant_btn.style.cursor = "pointer";
+              ant_btn_isPress = false;
+              ant_btn.style.color = "rgb(255, 135, 105)";
+              ant_btn.disabled = false;
+            }
+
+          }, 1000);
+        }
+      }
+
+
+      ant_btn.addEventListener("blur", function () {
+        timeid2 = setTimeout(() => {
+          ticket_field.classList.remove("active");
+        }, 100);
+
+      });
+
+
+      const modal_close_btn = document.querySelector(".miui-modal-close");
+      modal_close_btn.addEventListener("click", function () {
+        modal_wrap.style.display = "none";
+      });
+
+
+
+      const miui_btn_primary = document.querySelector(".miui-btn.miui-btn-primary");
+      miui_btn_primary.addEventListener("click", function () {
+        console.log(11);
+        mailbox_time();
+        checkbox_Selected();
+        modal_wrap.style.display = "none";
+      });
+
+
+
+      window.onclick = function (event) {
+        if (event.target == modal_wrap) {
+          modal_wrap.style.display = "none";
+        }
+      }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-feature-settings: "tnum";
+  background-color: #fff;
+  color: rgba(0, 0, 0, .85);
+  font-family: MiSans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+}
+
+body,
+html,
+#root,
+.login-password-root-wrap,
+.mi-sider-layout,
+.mi-sider-layout__content {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+::selection {
+  background: #ff5c00;
+  color: #fff;
+}
+
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.mi-sider-layout {
+  display: flex;
+}
+
+.mi-sider-layout__scroll .mi-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.mi-layout__container {
+  padding-top: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mi-layout__title {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mi-layout__title .title {
+  font-size: 26px;
+  font-weight: 900;
+  margin-left: 10px;
+  line-height: 40px;
+}
+
+
+.mi-nav {
+  float: right;
+}
+
+.mi-nav .mi-nav__item {
+  font-size: 15px;
+  font-weight: 900;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+
+.mi-nav .mi-nav__item:hover {
+  color: coral;
+}
+
+
+.mi-nav__item.language {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+}
+
+.mi-nav__item.language .ant-dropdown {
+  visibility: hidden;
+  transform: translateY(-10%);
+  position: absolute;
+  right: -8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+}
+
+@keyframes decline {
+  0% {
+    visibility: hidden;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+
+.mi-nav__item.language:hover .ant-dropdown {
+  animation: decline 0.3s ease-in-out forwards;
+}
+
+
+.mi-nav__item.language .ant-dropdown a {
+  padding: 5px 10px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.mi-nav__item.language .ant-dropdown a:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.mi-nav .line {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.mi-sider-layout__banner {
+  height: 100%;
+  width: 375px;
+  background-image: url(https://cdn.web-global.fds.api.mi-img.com/mcfe--mi-account/static/static/media/banner.92c693b4..jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mi-sider-layout__scroll {
+  padding: 20px;
+  line-height: 40px;
+}
+
+.mi-layout__logo {
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+
+.mi-layout__card {
+  position: relative;
+  padding: 40px 45px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.mi-layout__card .ant-tabs {
+  width: 360px;
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0 5px;
+  color: #999;
+  padding-bottom: 5px;
+}
+
+.ant-tabs-nav .ant-tabs-tab.active {
+  color: #333;
+  border-bottom: 5px solid coral;
+
+}
+
+.qr-switch-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 7px;
+  background-color: rgb(255, 190, 153);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.qr-switch-wrap:hover {
+  background-color: rgb(255, 92, 0);
+}
+
+.qr-switch-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right: 55px solid transparent;
+  border-left: 0px solid transparent;
+  border-bottom: 55px solid #fff;
+}
+
+.qr-switch-wrap .anticon {
+  font-size: 40px;
+  color: #fff;
+}
+
+.qr-switch-wrap .ant-popover {
+
+  visibility: hidden;
+  transform: scale(0.5);
+  transform: translateX(10%);
+
+
+  position: absolute;
+  right: 55px;
+  top: 10px;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 92, 0);
+}
+
+.qr-switch-wrap .ant-popover::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: -4px;
+
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+  border-left: 5px solid rgb(255, 92, 0);
+}
+
+
+@keyframes fadeInScale {
+  from {
+    visibility: hidden;
+    transform: scale(0.5);
+    transform: translateX(10%);
+  }
+
+  to {
+    visibility: visible;
+    transform: scale(1);
+    transform: translateX(0);
+  }
+}
+
+.qr-switch-wrap:hover .ant-popover {
+  animation: fadeInScale 0.3s ease-in-out forwards;
+}
+
+.ant-tabs-content-holder {
+  padding: 20px 2px 0;
+}
+
+.ant-tabs-content-holder .ant-row {
+  margin-bottom: 20px;
+}
+
+.ant-row .ant-col {
+  position: relative;
+}
+
+.mi-floating-label {
+  position: absolute;
+  left: 20px;
+  top: 15%;
+  color: #999;
+  font-size: 19px;
+  font-weight: 600;
+  pointer-events: none;
+  transition: transform 0.1s;
+}
+
+.ant-row .mi-input__input {
+  width: 354px;
+  height: 62px;
+  padding: 30px 20px 10px;
+  background-color: transparent;
+  background-color: rgb(249, 249, 249);
+  font-size: 17px;
+
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: border 0.3s,
+    box-shadow 0.3s;
+
+
+}
+
+.ant-tabs-content-holder .msg {
+  display: none;
+  color: #f04645;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 3px;
+  height: 30px;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+.ant-col .iconfont {
+  position: absolute;
+  color: #999;
+  transition: color 0.3s;
+  cursor: pointer;
+  top: 30%;
+  right: 15px;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+.ant-col .iconfont:hover {
+  color: #666;
+}
+
+.mi-accept-terms span {
+  color: #999;
+}
+
+.mi-accept-terms {
+  max-height: 30px;
+}
+
+
+
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+
+  /* 为了方便，你也可以设置margin、padding等样式 */
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+  /* 隐藏原生的checkbox */
+}
+
+.custom-checkbox {
+  cursor: pointer;
+  width: 15px;
+  /* 自定义尺寸 */
+  height: 15px;
+  /* 自定义尺寸 */
+  background-color: #f0f0f0;
+  /* 未选中时的背景颜色 */
+  border: 1px solid #ccc;
+  /* 边框 */
+  display: inline-block;
+  position: relative;
+  /* 添加一些圆角和其他装饰 */
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  /* 背景色变化的过渡效果 */
+
+  transition: border 0.3s ease;
+}
+
+.custom-checkbox:hover {
+  border: 1px solid #ff5c00;
+}
+
+
+/* 使用::after伪元素来显示勾号 */
+.custom-checkbox::after {
+  content: '';
+  position: absolute;
+  display: none;
+  /* 默认不显示勾号 */
+  left: 4px;
+  /* 勾号位置调整 */
+  top: 0px;
+  /* 勾号位置调整 */
+  width: 5px;
+  /* 勾号宽度 */
+  height: 10px;
+  /* 勾号高度 */
+  border: solid white;
+  /* 勾号颜色，这里假设背景是深色 */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  /* 旋转勾号 */
+}
+
+/* 当checkbox被选中时，显示勾号并改变背景颜色 */
+.checkbox-container input[type="checkbox"]:checked+.custom-checkbox {
+  background-color: #ff5c00;
+  /* 选中时的背景颜色 */
+}
+
+.checkbox-container input[type="checkbox"]:checked+.custom-checkbox::after {
+  display: block;
+  /* 显示勾号 */
+}
+
+
+.ant-tabs-content-holder .mi-button {
+  margin-top: 10px;
+  padding: 15px 0;
+  width: 100%;
+  background-color: rgb(255, 190, 153);
+  transition: background-color 0.3s ease;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.ant-tabs-content-holder .mi-button:hover {
+  background-color: rgb(255, 203, 169);
+}
+
+.ant-tabs-content-holder .mi-form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mi-form-actions .mi-external-url {
+  color: #ff5c00;
+  font-weight: 500;
+}
+
+.mi-sns-login .mi-sns-login__title {
+  text-align: center;
+  color: #999;
+  font-weight: 500;
+}
+
+.mi-sns-login__list .iconfont.icon-zhifubao {
+  color: rgb(37, 149, 255);
+}
+
+.mi-sns-login__list .iconfont.icon-weixin {
+  color: rgb(24, 126, 60);
+}
+
+.mi-sns-login__list .iconfont.icon-QQ-circle-fill {
+
+  color: rgb(0, 134, 214);
+  font-size: 32px;
+}
+
+.mi-sns-login__list .iconfont.icon-weibo {
+  color: rgb(243, 102, 101);
+}
+
+.mi-sns-login__content .mi-sns-login__list {
+  display: flex;
+  justify-content: center;
+
+}
+
+.mi-sns-login__list .iconfont {
+  font-size: 30px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.mi-copyright {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+}
